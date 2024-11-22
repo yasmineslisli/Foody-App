@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">FoodyApp</string>
+
+
+    <string name="login_button">Login</string>
+    <string name="continue_button">Continue</string>
+    <string name="createAccount">Create New Account</string>
+
+    <string name="popular_recipes">Popular recipes</string>
+    <string name="Editor_choice">Editor's Choice</string>
+    <string name="details">Details</string>
+    <string name="Ingredients">Ingredients</string>
+    <string name="easy_steps">Easy steps</string>
 </resources>
