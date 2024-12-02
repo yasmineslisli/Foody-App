@@ -12,4 +12,6 @@
     <color name="brown">#32201C</color>
     <color name="bleuciel">#70B9BE</color>
     <color name="vertclair">#AEE2BA80</color>
+    <color name="lightGray">#d3d3d3</color>
+    <color name="darkGray">#363636</color>
 </resources>
