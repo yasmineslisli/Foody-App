@@ -7,16 +7,16 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodyapp.R
 
-class FoodAdapter: RecyclerView.Adapter<FoodAdapter.ViewHolder>() {
+class FoodAdapter(private val layoutId:Int): RecyclerView.Adapter<FoodAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val foodImage = view.findViewById<ImageView>(R.id.image_item)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_horizontal_food, parent, false)
+        val view = LayoutInflater
+            .from(parent.context)
+            .inflate(layoutId, parent, false)
         return ViewHolder(view)
     }
 

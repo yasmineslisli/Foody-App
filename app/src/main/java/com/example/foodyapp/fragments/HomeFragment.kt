@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodyapp.R
 import com.example.foodyapp.adapter.FoodAdapter
+import com.example.foodyapp.adapter.FoodItemDecoration
 
 
 class HomeFragment : Fragment() {
@@ -15,8 +16,11 @@ class HomeFragment : Fragment() {
         val view = inflater?.inflate(R.layout.fragment_home,container,false)
 
         val horizontalRecyclerView = view?.findViewById<RecyclerView>(R.id.horizontal_recycler_view)
-        horizontalRecyclerView?.adapter = FoodAdapter()
+        horizontalRecyclerView?.adapter = FoodAdapter(R.layout.item_horizontal_food)
 
+        val verticalRecyclerView = view?.findViewById<RecyclerView>(R.id.vertical_recycler_view)
+        verticalRecyclerView?.adapter = FoodAdapter(R.layout.item_vertical_food)
+        verticalRecyclerView?.addItemDecoration(FoodItemDecoration())
         return view
     }
 }

@@ -13,5 +13,8 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.fragment_container, HomeFragment())
         transaction.addToBackStack(null)
         transaction.commit()
+
     }
+
+
 }

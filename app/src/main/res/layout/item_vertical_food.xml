@@ -1,0 +1,75 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/rounded_background"
+        android:layout_width="250dp"
+        android:layout_height="120dp"
+        android:padding="8dp"
+        android:layout_marginLeft="80dp">
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/beefsteak" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/cardView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Beef Steak"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            <Button
+                    android:id="@+id/description_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="→"
+                    android:backgroundTint="@color/lightGray"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toEndOf="@id/description"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+                android:id="@+id/additionalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A delicious and juicy steak prepared to perfection."
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
