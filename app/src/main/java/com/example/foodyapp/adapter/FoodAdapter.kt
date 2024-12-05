@@ -5,9 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.foodyapp.MainActivity
 import com.example.foodyapp.R
+import com.example.foodyapp.RecipeDetailsActivity
 
-class FoodAdapter(private val layoutId:Int): RecyclerView.Adapter<FoodAdapter.ViewHolder>() {
+class FoodAdapter(val context: MainActivity, private val layoutId:Int): RecyclerView.Adapter<FoodAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     }
@@ -20,7 +22,11 @@ class FoodAdapter(private val layoutId:Int): RecyclerView.Adapter<FoodAdapter.Vi
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {}
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.itemView.setOnClickListener{
+            RecipeDetailsActivity(this).show()
+        }
+    }
 
     override fun getItemCount(): Int = 5
 }
