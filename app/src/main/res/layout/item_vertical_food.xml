@@ -18,6 +18,7 @@
             app:cardElevation="4dp">
 
         <ImageView
+                android:id="@+id/image_item"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -36,40 +37,28 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="91dp">
 
             <TextView
                     android:id="@+id/description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="144dp"
+                    android:layout_height="88dp"
                     android:text="Beef Steak"
                     android:textColor="@android:color/black"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent" />
-
-            <Button
-                    android:id="@+id/description_button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:text="→"
-                    android:backgroundTint="@color/lightGray"
-                    android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toEndOf="@id/description"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-            />
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.101"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-                android:id="@+id/additionalText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="A delicious and juicy steak prepared to perfection."
-                android:textColor="@android:color/black"
-                android:textSize="14sp"
-                android:layout_marginTop="4dp" />
+<!--        <TextView-->
+<!--                android:id="@+id/additionalText"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="New"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:textSize="14sp"-->
+<!--                android:layout_marginTop="4dp" />-->
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

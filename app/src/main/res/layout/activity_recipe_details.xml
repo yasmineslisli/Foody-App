@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/green"
-            android:padding="16dp">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/green"
+        android:padding="16dp">
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -21,6 +22,7 @@
                 app:cardElevation="4dp">
 
             <ImageView
+                    android:id="@+id/recipe_image"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
@@ -29,135 +31,93 @@
 
         <!-- Recipe Title -->
         <TextView
+                android:id="@+id/recipe_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Salami And Cheese Pizza"
-                android:textSize="20sp"
+                android:textSize="24sp"
                 android:textStyle="bold"
-                android:textColor="@color/darkGray" />
-
-        <!-- Icon Row -->
-        <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp">
-
-            <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@drawable/burger"
-                    app:tint="@color/white"/>
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="5"
-                    android:textColor="@android:color/white"
-                    android:layout_marginStart="4dp" />
-
-            <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@drawable/burger"
-                    app:tint="@color/white"
-                    android:layout_marginStart="16dp" />
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="28"
-                    android:textColor="@android:color/white"
-                    android:layout_marginStart="4dp" />
-        </LinearLayout>
-
-        <!-- Nutrition Information -->
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="16dp">
-
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_marginEnd="16dp">
-
-                <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:src="@drawable/burger" />
-
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="65g carbs"
-                        android:textColor="@color/darkGray" />
-            </LinearLayout>
-
-            <!-- Repeat for other nutrition details -->
-            <!-- Protein -->
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:src="@drawable/burger" />
-
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="27g proteins"
-                        android:textColor="@android:color/white" />
-            </LinearLayout>
-        </LinearLayout>
+                android:textColor="@color/white"
+                android:layout_marginBottom="8dp" />
 
         <!-- Details Section -->
         <TextView
-                android:id="@+id/details_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Details"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="@color/darkGray"
+                android:textColor="@color/white"
                 android:layout_marginTop="24dp" />
+    <LinearLayout
+            android:id="@+id/details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:background="@drawable/rounded_background">
 
         <TextView
+                android:id="@+id/recipe_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="⏱ 30 min"
-                android:textColor="@android:color/white" />
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="This is a quick overview of the ingredients you’ll need for this recipe..."
-                android:textColor="@android:color/white"
+                android:textColor="@color/black"
                 android:layout_marginTop="8dp" />
-
+    </LinearLayout>
         <!-- Ingredients Section -->
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ingredients"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="@color/darkGray"
+                android:textColor="@color/white"
                 android:layout_marginTop="24dp" />
 
+        <LinearLayout
+                android:id="@+id/ingredients_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:background="@drawable/rounded_background">
+
+            <TextView
+                    android:id="@+id/ingredients_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:lineSpacingExtra="4dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+        <!-- Instructions Section -->
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="• 1 pre-made pizza dough\n• 1/2 cup pizza sauce\n• 1 1/2 cups shredded mozzarella cheese"
-                android:textColor="@android:color/white"
-                android:layout_marginTop="8dp" />
+                android:text="Instructions"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="24dp" />
+
+        <LinearLayout
+                android:id="@+id/instructions_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:background="@drawable/rounded_background">
+
+            <TextView
+                    android:id="@+id/instructions_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:lineSpacingExtra="4dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
