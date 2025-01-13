@@ -3,6 +3,7 @@ package com.example.foodyapp
 import android.app.Dialog
 import android.os.Bundle
 import android.view.Window
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -19,7 +20,10 @@ class RecipeDetailsActivity(
 
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(R.layout.activity_recipe_details)
-
+        val closeButton = findViewById<ImageButton>(R.id.close_button)
+        closeButton.setOnClickListener {
+            dismiss()
+        }
         // Find views
         val titleTextView = findViewById<TextView>(R.id.recipe_title)
         val descriptionTextView = findViewById<TextView>(R.id.recipe_description)
