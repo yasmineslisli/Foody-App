@@ -1,7 +1,6 @@
 package com.example.foodyapp.adapter
 
-import android.content.Intent
-import android.net.Uri
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +15,7 @@ import com.example.foodyapp.RecipeDetailsActivity
 
 class FoodAdapter(
     val context: MainActivity,
-    private val foodList: List<FoodModel>,
+    var foodList: List<FoodModel>,
     private val layoutId:Int
 ): RecyclerView.Adapter<FoodAdapter.ViewHolder>() {
 
@@ -55,4 +54,9 @@ class FoodAdapter(
     }
 
     override fun getItemCount(): Int = foodList.size
+
+    fun updateList(newList: List<FoodModel>) {
+        foodList = newList
+        notifyDataSetChanged()
+    }
 }

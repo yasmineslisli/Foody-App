@@ -9,3 +9,4 @@ data class FoodModel(
     val ingredients: List<String> = emptyList(),
     val instructions: List<String> = emptyList()
 ) : Serializable
+
