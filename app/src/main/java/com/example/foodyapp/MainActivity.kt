@@ -110,6 +110,8 @@ class MainActivity : AppCompatActivity() {
                 SearchState.Empty -> {
                     showHomeFragment()
                 }
+
+                else -> {}
             }
         }
     }
