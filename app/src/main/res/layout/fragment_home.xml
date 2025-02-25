@@ -36,5 +36,17 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add_recipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            app:backgroundTint="@color/white"
+            android:contentDescription="Add Recipe"
+            app:layout_anchorGravity="bottom|end"
+            android:layout_margin="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+
 </LinearLayout>
 

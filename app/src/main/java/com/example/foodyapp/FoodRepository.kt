@@ -13,6 +13,26 @@ class FoodRepository {
         val databaseRef = FirebaseDatabase.getInstance().getReference("FoodScroll")
 
         val foodList = arrayListOf<FoodModel>()
+
+        fun addRecipe(newRecipe: FoodModel, callback: (Boolean) -> Unit) {
+            val key = databaseRef.push().key // Generates a unique key for the new recipe
+            if (key != null) {
+                databaseRef.child(key).setValue(newRecipe).addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        // Recipe added successfully
+                        foodList.add(newRecipe)
+                        callback(true)
+                    } else {
+                        // Failed to add recipe
+                        Log.e("FoodRepository", "Failed to add recipe: ${task.exception?.message}")
+                        callback(false)
+                    }
+                }
+            } else {
+                // If the key is null, we couldn't generate a unique key
+                callback(false)
+            }
+        }
     }
 
     fun updateData(callback: () -> Unit) {
@@ -33,8 +53,6 @@ class FoodRepository {
             }
         })
     }
-
-
 
 }
 

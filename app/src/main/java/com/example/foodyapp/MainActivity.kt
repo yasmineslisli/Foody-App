@@ -26,22 +26,16 @@ class MainActivity : AppCompatActivity() {
         FirebaseApp.initializeApp(this)
         setContentView(R.layout.activity_main)
 
-        // Initialize views
         setupViews()
 
-        // Initialize ViewModel
         viewModel = SearchViewModel(FoodSearchRepository())
 
-        // Initialize RecyclerView and adapter
         setupRecyclerView()
 
-        // Setup search functionality
         setupSearch()
 
-        // Setup observers
         setupObservers()
 
-        // Load initial home fragment
         loadHomeFragment()
     }
 
